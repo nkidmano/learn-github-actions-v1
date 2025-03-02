@@ -1,0 +1,15 @@
+name: Pull request pipeline
+
+on: [push]
+
+jobs:
+  shell-commands:
+    name: Run shell commands
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo a string
+        run: echo "Hello World"
+      - name: Run multiline commands
+        run: |
+          node -v
+          npm -v 
