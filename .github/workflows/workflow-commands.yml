@@ -8,3 +8,7 @@ jobs:
     steps:
       - name: Setting an error message
         run: echo "::error::Missing semicolon"
+      - name: Setting error with parameter
+        run: echo "::error title=Error title,file=app.js,line=2:: Missing semicolon"
+      - name: Setting warning with parameter
+        run: echo "::warning title=Warning title,file=app.js,line=2:: Missing semicolon"
