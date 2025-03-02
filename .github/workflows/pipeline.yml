@@ -29,4 +29,4 @@ jobs:
       - name: Echo a string
         run: Write-Output "Hello World from Window"
       - name: Error step
-        run: nonexistencommdand
+        run: nonexistencommdands
