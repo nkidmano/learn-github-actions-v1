@@ -13,3 +13,20 @@ jobs:
         run: |
           node -v
           npm -v 
+
+  parallel-job-macos:
+    name: MacOS parallel job
+    runs-on: macos-latest
+    steps:
+      - name: View SW version
+        run: sw_vers
+
+  dependant-job:
+    name: Window dependant job
+    runs-on: windows-latest
+    needs: [parallel-job-macos]
+    steps:
+      - name: Echo a string
+        run: Write-Output "Hello World from Window"
+      - name: Error step
+        run: nonexistencommdand
