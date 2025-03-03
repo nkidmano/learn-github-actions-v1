@@ -14,4 +14,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Logging
-        run: Echo "Hello World"
+        run: echo "Hello World"
