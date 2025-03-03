@@ -2,6 +2,9 @@ name: Repository events
 
 on:
   push:
+    branches: [main, "features/*"]
+    tags: [v1.*]
+    paths: ['**.ts', '**.js', '**.tsx', '**.jsx']
   pull_request:
     types: [opened, assigned, reopened, synchronize]
   issues:
