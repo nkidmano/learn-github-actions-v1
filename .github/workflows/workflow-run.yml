@@ -1,0 +1,14 @@
+name: Workflow run
+
+on:
+  workflow_run:
+    workflows: [Repository events]
+    types: [completed]
+
+jobs:
+  echo-string:
+    name: Echo string
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo string
+        run: echo "Workflow run after repo checkout finished"
