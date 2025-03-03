@@ -1,17 +1,16 @@
-name: Trigger event
+name: Repository events
 
 on:
   push:
   pull_request:
-    branches: [main, features/*]
     types: [opened, assigned, reopened, synchronize]
   issues:
     types: [opened]
 
 jobs:
   trigger-event:
-    name: Trigger event
+    name: Repository events
     runs-on: ubuntu-latest
     steps:
-      - name: Logging
-        run: echo "Hello World"
+      - name: Checkout repository
+        uses: actions/checkout@v4
