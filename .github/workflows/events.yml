@@ -1,9 +1,17 @@
-name: Event trigger
+name: Trigger event
 
 on:
   push:
   pull_request:
-    branches: [main]
+    branches: [main, features/*]
     types: [opened, assigned, reopened, synchronize]
   issues:
     types: [opened]
+
+jobs:
+  trigger-event:
+    name: Trigger event
+    runs-on: ubuntu-latest
+    steps:
+      - name: Logging
+        run: echo "Hello World"
