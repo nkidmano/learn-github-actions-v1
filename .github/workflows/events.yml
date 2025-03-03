@@ -1,0 +1,9 @@
+name: Event trigger
+
+on:
+  push:
+  pull_request:
+    branches: [main]
+    types: [opened, assigned, reopened, synchronize]
+  issues:
+    types: [opened]
